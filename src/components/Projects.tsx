@@ -12,16 +12,17 @@ const projects: Project[] = [
     title: "Portfolio Website",
     description: "My personal site built with React + TypeScript. Responsive, with dark/light mode and a contact form.",
     tech: ["React", "TypeScript", "CSS"],
-    repo: "https://github.com/yourname/portfolio",
+    repo: "https://github.com/aimanpashtun/my-portfolio",
     link: "#",
-    image: "https://placehold.co/600x400/png"
+    image: "\Portfolio web.png" // Use this path
   },
+
   {
-    title: "Algo Visualizer",
-    description: "Interactive visualizations for sorting and pathfinding algorithms.",
-    tech: ["React", "Canvas"],
-    repo: "https://github.com/yourname/algo-visualizer",
-    image: "https://placehold.co/600x400/png"
+    title: "IVConnect",
+    description: "An interactive website for IVC where students can connect as a communtiy built for the IVC Hackathon.",
+    tech: ["JavaScript", "HTML" , "CSS"],
+    repo: "https://github.com/aimanpashtun/IVConnect",
+    image: "\IVConnect web .png"
   },
   {
     title: "MindMaze (WIP)",

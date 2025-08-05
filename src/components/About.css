@@ -1,0 +1,49 @@
+.about-section {
+  padding: 4rem 2rem;
+  border-radius: 1.5rem;
+  margin: 0 auto 4rem auto;
+  max-width: 1000px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+  text-align: center;
+}
+
+.about-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  border: 3px solid var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.about-name {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.about-bio {
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.resume-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.resume-btn:hover {
+  opacity: 0.85;
+}

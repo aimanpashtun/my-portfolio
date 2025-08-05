@@ -1,0 +1,69 @@
+/* src/components/InfoSection.css */
+.info-section {
+  background: linear-gradient(to right, #fef6ff, #f6faff);
+  border-radius: 2rem;
+  margin-bottom: 4rem;
+  padding: 4rem 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto 4rem auto;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="dark"] .info-section {
+  background: var(--card);
+}
+
+.info-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.info-column {
+  flex: 1;
+  min-width: 240px;
+}
+
+.info-column h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.info-column ul {
+  list-style: none;
+  padding-left: 0;
+  color: var(--text);
+}
+
+.info-column li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.info-column a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.info-column a:hover {
+  text-decoration: underline;
+}
+
+.info-column a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.info-column a:hover {
+  text-decoration: underline;
+  color: var(--accent); /* Ensures hover stays pink */
+}
+
