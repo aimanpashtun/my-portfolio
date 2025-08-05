@@ -19,7 +19,7 @@ const projects: Project[] = [
 
   {
     title: "IVConnect",
-    description: "An interactive website for IVC where students can connect as a communtiy built for the IVC Hackathon.",
+    description: "An interactive website for IVC where students can connect as a communtiy - built for the IVC Hackathon.",
     tech: ["JavaScript", "HTML" , "CSS"],
     repo: "https://github.com/aimanpashtun/IVConnect",
     image: "\IVConnect web .png"
