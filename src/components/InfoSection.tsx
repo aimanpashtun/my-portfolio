@@ -21,6 +21,8 @@ const InfoSection = () => {
             <li>President – Book Club</li>
             <li>Staff Editor – The Ear (Literary Journal)</li>
             <li>Secretary – Girls Who Code Club</li>
+            <li>Writer - Honors Newsletter</li>
+            <li>Frontend Developer - CodeBase</li>
           </ul>
         </div>
 

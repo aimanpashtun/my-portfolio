@@ -30,7 +30,7 @@ const About = () => {
 
       {/* Resume Button */}
       <a
-        href="/Resume.pdf"
+        href="/Aiman Pashtun's resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="resume-btn"
