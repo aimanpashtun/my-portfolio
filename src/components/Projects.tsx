@@ -13,7 +13,7 @@ const projects: Project[] = [
     description: "My personal site built with React + TypeScript. Responsive, with dark/light mode and a contact form.",
     tech: ["React", "TypeScript", "CSS"],
     repo: "https://github.com/aimanpashtun/my-portfolio",
-    link: "#",
+    link: "https://aimanpashtun-portfolio.vercel.app/",
     image: "\Portfolio web.png" // Use this path
   },
 
@@ -25,10 +25,12 @@ const projects: Project[] = [
     image: "\IVConnect web .png"
   },
   {
-    title: "MindMaze (WIP)",
-    description: "Gamified mental health mini-app with journaling, breathing, and reading time.",
+    title: "MindMaze",
+    description: "Gamified personalized mini-app with journaling, reading tracker, and mind games.",
     tech: ["React", "TypeScript"],
-    image: "https://placehold.co/600x400/png"
+    repo: "https://github.com/aimanpashtun/mindmaze/tree/main",
+    link: "https://mind-maze-rose.vercel.app/",
+    image: "\mindmaze.png"
   }
 ];
 
