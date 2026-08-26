@@ -62,20 +62,62 @@
     font-size: 1.4rem;
   }
 
-  /* Nav */
+  .hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text);
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
   .nav-links {
-    gap: 0.5rem;
-    font-size: 0.85rem;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--card);
+    border-bottom: 1px solid var(--line);
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 0;
+    transform: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid var(--line);
+  }
+
+  nav {
+    position: relative; /* so dropdown positions correctly */
   }
 
   .nav-name {
-    display: none; /* just avatar shows on very small screens */
+    display: none;
   }
+}
 
+@media (max-width: 480px) {
   .back-button {
     padding: 0.35rem 0.6rem;
     font-size: 0.85rem;
   }
+}
 
   /* Projects grid — force single column */
   .projects-grid {
