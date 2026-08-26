@@ -18,24 +18,24 @@ const About = () => {
 
       {/* Bio */}
       <p className="about-bio">
-        Hi! I'm Aiman Pashtun, a Computer Science student currently studying at Irvine Valley College.
-        I'm a sophomore who also serves as the secretary of the Girls Who Code Club and the president of 
-        the Book Club. I love coding in my free time and constantly explore new languages and tools as the 
-        tech world keeps evolving. Outside of coding, I'm really passionate about literature. I'm part of 
-        the honors newsletter team and the editing staff for our literary journal, The Ear. When I'm not 
-        studying, you’ll probably find me reading fantasy or romance books, rewatching my comfort shows, 
-        watching Formula 1, going to the beach, chasing sunsets, spending time with family and friends, 
+        Hi there! I'm Aiman Pashtun, a Linguistics & Computer Science Honors student currently studying at UCLA.
+        I'm a Junior working on my side projects whilst balancing my academics and personal life.
+        I enjoy coding in my free time by constantly exploring new languages and tools as the 
+        tech world keeps evolving. I keep up with up-to-date trends in the industry. Outside of coding,
+        I'm involved in GWC, RTC, and women-supporting organizations in tech. When I'm not 
+        doing any of the above, you’ll probably find me reading books, rewatching my comfort shows, 
+        catching up with Formula 1, going to the beach, chasing sunsets, spending time with family and friends, 
         or video editing.
       </p>
 
       {/* Resume Button */}
       <a
-        href="/Aiman Pashtun's resume.pdf"
+        href="/Aiman's Resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="resume-btn"
       >
-        View My Resume →
+        View My Resume
       </a>
 
       {/* Embedded Info Section */}

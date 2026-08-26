@@ -1,0 +1,225 @@
+.intro-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.intro-theme-toggle {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.intro-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Avatar + flag area */
+
+.character-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  animation: walkIn 2.4s ease-in-out forwards;
+}
+
+@keyframes walkIn {
+  0% {
+    transform: translateX(-90vw) translateY(0) rotate(0deg);
+  }
+
+  10% {
+    transform: translateX(-80vw) translateY(-7px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translateX(-70vw) translateY(0) rotate(1deg);
+  }
+
+  30% {
+    transform: translateX(-60vw) translateY(-7px) rotate(-1deg);
+  }
+
+  40% {
+    transform: translateX(-50vw) translateY(0) rotate(1deg);
+  }
+
+  50% {
+    transform: translateX(-40vw) translateY(-7px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translateX(-30vw) translateY(0) rotate(1deg);
+  }
+
+  70% {
+    transform: translateX(-20vw) translateY(-7px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translateX(-10vw) translateY(0) rotate(1deg);
+  }
+
+  90% {
+    transform: translateX(8px) translateY(-4px) rotate(-0.5deg);
+  }
+
+  100% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+}
+
+.intro-avatar {
+  width: 185px;
+  max-width: 34vw;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+/* UCLA flag */
+
+.ucla-flag-image {
+  position: absolute;
+  width: 210px;
+  right: -150px;
+  top: 95px;
+  opacity: 0;
+  transform-origin: left center;
+  z-index: 1;
+  animation: flagReveal 0.8s ease-out 2.45s forwards;
+}
+
+@keyframes flagReveal {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px) translateY(-10px) rotate(-10deg) scale(0.92);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0) rotate(0deg) scale(1);
+  }
+}
+
+/* Text */
+
+.intro-text {
+  text-align: center;
+}
+
+.intro-text h1 {
+  margin: 0;
+  font-size: clamp(3rem, 7vw, 5.6rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--text);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: textReveal 0.8s ease-out 3.1s forwards;
+}
+
+.intro-text p {
+  margin-top: 1rem;
+  font-size: clamp(1.05rem, 2vw, 1.4rem);
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  opacity: 0;
+  transform: translateY(12px);
+  animation: textReveal 0.8s ease-out 3.35s forwards;
+}
+
+@keyframes textReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enter button */
+
+.enter-button {
+  display: inline-block;
+  background: var(--accent);
+  color: #ffffff;
+  border: none;
+  padding: 0.9rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 999px;
+  cursor: pointer;
+  letter-spacing: 0.02rem;
+  transition: all 0.2s ease;
+}
+
+.enter-button:hover {
+  background: #d97fa0; /* slightly deeper pink than --accent */
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.enter-button:active {
+  transform: translateY(0);
+}
+
+@keyframes buttonReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .intro-stage {
+    padding: 1.5rem;
+  }
+
+  .intro-avatar {
+    width: 150px;
+    max-width: 42vw;
+  }
+
+  .ucla-flag-image {
+    width: 150px;
+    right: -105px;
+    top: 80px;
+  }
+
+  .intro-text h1 {
+    font-size: clamp(2.6rem, 11vw, 4rem);
+  }
+
+  .intro-text p {
+    font-size: 1rem;
+  }
+
+  .enter-button {
+    padding: 0.85rem 1.6rem;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .character-container,
+  .ucla-flag-image,
+  .intro-text h1,
+  .intro-text p,
+  .enter-button {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
