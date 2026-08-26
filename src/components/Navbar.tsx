@@ -34,9 +34,7 @@ const Navbar = ({ onBack }: NavbarProps) => {
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </div>
 
-        <div className="nav-right">
-          <ThemeToggle />
-        </div>
+        <ThemeToggle />
       </div>
     </nav>
   );

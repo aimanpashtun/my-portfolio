@@ -62,7 +62,84 @@
     font-size: 1.4rem;
   }
 
-  .hamburger {
+  /* ===== NAV ===== */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--card);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.nav-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.nav-name {
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.back-button {
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-weight: 600;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.back-button:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex: 1;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+  color: var(--accent);
+}
+
+.hamburger {
   display: none;
   background: none;
   border: none;
@@ -72,9 +149,23 @@
   padding: 0.25rem 0.5rem;
 }
 
+/* ===== NAV — TABLET/PHONE ===== */
 @media (max-width: 768px) {
+  nav {
+    position: sticky;
+  }
+
+  .nav-inner {
+    position: relative;
+    flex-wrap: nowrap;
+  }
+
   .hamburger {
     display: block;
+  }
+
+  .nav-name {
+    display: none;
   }
 
   .nav-links {
@@ -89,7 +180,7 @@
     align-items: center;
     gap: 0;
     padding: 0;
-    transform: none;
+    z-index: 20;
   }
 
   .nav-links.open {
@@ -101,14 +192,6 @@
     text-align: center;
     padding: 1rem;
     border-top: 1px solid var(--line);
-  }
-
-  nav {
-    position: relative; /* so dropdown positions correctly */
-  }
-
-  .nav-name {
-    display: none;
   }
 }
 
