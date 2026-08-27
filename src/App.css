@@ -3,6 +3,54 @@
   min-height: 100vh;
 }
 
+/* ============================
+   GENERAL SECTION SPACING
+   ============================ */
+@media (max-width: 768px) {
+  section {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .section-box {
+    padding: 2.5rem 1.25rem;
+  }
+
+  h2 {
+    font-size: 1.65rem;
+  }
+
+  .projects-grid {
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .section-box {
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-img {
+    height: 140px;
+  }
+
+  form {
+    margin: 1rem 0;
+  }
+}
+
 /* ===== NAV — BASE (desktop) ===== */
 nav {
   position: sticky;
@@ -84,104 +132,59 @@ nav {
   display: none;
   background: none;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--text);
   cursor: pointer;
   padding: 0.25rem 0.5rem;
+  line-height: 1;
 }
 
-/* ============================
-   RESPONSIVE — TABLET (≤768px)
-   ============================ */
+.nav-dropdown {
+  display: none;
+}
+
+/* ===== NAV — MOBILE (≤768px) ===== */
 @media (max-width: 768px) {
-  section {
-    padding: 2.5rem 1.25rem;
-  }
-
-  .section-box {
-    padding: 2.5rem 1.25rem;
-  }
-
-  h2 {
-    font-size: 1.65rem;
-  }
-
-  .nav-inner {
-    position: relative;
-    flex-wrap: nowrap;
-    padding: 0.75rem 1rem;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
   .nav-name {
     display: none;
   }
 
   .nav-links {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: var(--card);
-    border-bottom: 1px solid var(--line);
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-dropdown {
+    display: none;
     flex-direction: column;
-    align-items: center;
-    gap: 0;
-    padding: 0;
-    z-index: 20;
-  }
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  .nav-links a {
-    width: 100%;
-    text-align: center;
-    padding: 1rem;
+    background: var(--card);
     border-top: 1px solid var(--line);
   }
 
-  .projects-grid {
-    gap: 0.75rem;
+  .nav-dropdown.open {
+    display: flex;
+  }
+
+  .nav-dropdown a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav-dropdown a:hover {
+    color: var(--accent);
   }
 }
 
-/* ============================
-   RESPONSIVE — PHONE (≤480px)
-   ============================ */
 @media (max-width: 480px) {
-  section {
-    padding: 2rem 1rem;
-  }
-
-  .section-box {
-    padding: 2rem 1rem;
-    border-radius: 1rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
   .back-button {
     padding: 0.35rem 0.6rem;
     font-size: 0.85rem;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .card-img {
-    height: 140px;
-  }
-
-  form {
-    margin: 1rem 0;
   }
 }
