@@ -3,66 +3,7 @@
   min-height: 100vh;
 }
 
-/* ============================
-   RESPONSIVE — TABLET (≤768px)
-   ============================ */
-@media (max-width: 768px) {
-  section {
-    padding: 2.5rem 1.25rem;
-  }
-
-  .section-box {
-    padding: 2.5rem 1.25rem;
-  }
-
-  h2 {
-    font-size: 1.65rem;
-  }
-
-  /* Nav */
-  .nav-inner {
-    flex-wrap: wrap;
-    padding: 0.75rem 1rem;
-    gap: 0.5rem;
-  }
-
-  .nav-links {
-    order: 3;
-    width: 100%;
-    justify-content: center;
-    transform: none;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .nav-left {
-    order: 1;
-  }
-
-  /* Projects grid already auto-fits via minmax, but tighten gap */
-  .projects-grid {
-    gap: 0.75rem;
-  }
-}
-
-/* ============================
-   RESPONSIVE — PHONE (≤480px)
-   ============================ */
-@media (max-width: 480px) {
-  section {
-    padding: 2rem 1rem;
-  }
-
-  .section-box {
-    padding: 2rem 1rem;
-    border-radius: 1rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  /* ===== NAV ===== */
+/* ===== NAV — BASE (desktop) ===== */
 nav {
   position: sticky;
   top: 0;
@@ -149,15 +90,26 @@ nav {
   padding: 0.25rem 0.5rem;
 }
 
-/* ===== NAV — TABLET/PHONE ===== */
+/* ============================
+   RESPONSIVE — TABLET (≤768px)
+   ============================ */
 @media (max-width: 768px) {
-  nav {
-    position: sticky;
+  section {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .section-box {
+    padding: 2.5rem 1.25rem;
+  }
+
+  h2 {
+    font-size: 1.65rem;
   }
 
   .nav-inner {
     position: relative;
     flex-wrap: nowrap;
+    padding: 0.75rem 1rem;
   }
 
   .hamburger {
@@ -193,16 +145,34 @@ nav {
     padding: 1rem;
     border-top: 1px solid var(--line);
   }
+
+  .projects-grid {
+    gap: 0.75rem;
+  }
 }
 
+/* ============================
+   RESPONSIVE — PHONE (≤480px)
+   ============================ */
 @media (max-width: 480px) {
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .section-box {
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
   .back-button {
     padding: 0.35rem 0.6rem;
     font-size: 0.85rem;
   }
-}
 
-  /* Projects grid — force single column */
   .projects-grid {
     grid-template-columns: 1fr;
   }
